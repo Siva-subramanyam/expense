@@ -3,7 +3,7 @@
   become: yes
   vars:
     local_host: 54.144.100.158
-  vars_prompts:
+  vars_prompt:
   - name: MYSQL_root_pass
     prompt: please enter MYSQL root password
     private: no
