@@ -2,7 +2,7 @@
   hosts: localhost
   become: yes
   vars:
-    login_host: 172.31.16.160
+    login_host: 54.160.174.55
   vars_prompt:
   - name: MYSQL_root_pass
     prompt: please enter MYSQL root password
@@ -29,7 +29,7 @@
   - name: check db connection
     community.mysql.mysql_info:
       login_user: root
-      login_password: "{{ mysql_root_password }}"
+      login_password: "{{ mysql_root_pass }}"
       login_host: "{{ login_host }}"
       filter: version
     ignore_errors: yes
