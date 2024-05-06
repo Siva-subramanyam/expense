@@ -1,8 +1,8 @@
 - name: configure DB server
-  hosts: db
+  hosts: localhost
   become: yes
   vars:
-    login_host: 172.31.18.17
+    login_host: 52.91.242.246
   vars_prompt:
   - name: MYSQL_root_pass
     prompt: please enter MYSQL root password
